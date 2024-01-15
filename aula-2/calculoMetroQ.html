@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Média </title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Expressões matemáticas</h1>
+
+            <p>Parágrafo</p>
+
+            <label for="txt1">Largura:</label>
+            <input type="number" id="txt0">
+
+            <label for="txt1">Comprimento:</label>
+            <input type="number" id="txt1">
+
+            <label for="txt1">Valor por metro²:</label>
+            <input type="number" id="txt2">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var x = document.getElementById("txt0").value;
+            var largura = parseFloat(x);
+            var y = document.getElementById("txt1").value;
+            var comprimento = parseFloat(y);
+            var area = largura * comprimento ;
+
+            var z = document.getElementById("txt2").value;
+            var valorMetro = parseFloat(z);
+
+            var valorTerreno = area * valorMetro;
+
+            var mensagem = "O tamanho do terreno é " + area + "m². E o valor do imóvel é por m² é: " + valorTerreno.toFixed(2);
+            
+
+            alert(mensagem);
+
+        }
+
+    </script>
+
+</body>
+</html>

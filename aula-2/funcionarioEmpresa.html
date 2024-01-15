@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Empresa </title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Sistema de pagamentos</h1>
+
+            <p>Caixa de Supermecado</p>
+
+            <label for="txt1">Nome do funcionario:</label>
+            <input type="text" id="txt0">
+
+            <label for="txt1">Valor pago por hora:</label>
+            <input type="number" id="txt1">
+
+            <label for="txt1">Total de hora trabalhadas:</label>
+            <input type="number" id="txt2">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var nomeFuncionario = document.getElementById("txt0").value;
+
+            var y = document.getElementById("txt1").value;
+            var horaValor = parseFloat(y);
+
+            var z = document.getElementById("txt2").value;
+            var quantidadeHora = parseFloat(z);
+
+            var totalSalario = horaValor * quantidadeHora;
+
+            var mensagem = "O sálario do " + nomeFuncionario + " de acordo com o valor de " + horaValor + "$ por hora é de " + totalSalario.toFixed(2) + "$.";
+            
+
+            alert(mensagem);
+
+        }
+
+    </script>
+
+</body>
+</html>

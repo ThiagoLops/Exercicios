@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Primos</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Primos </h1>
+
+            <p>Descubra os numeros primos: </p>
+            
+            <label for="numeroDigitado">Digite um numero:</label> <input type="number" id="numeroDigitado" />
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var txtNumero = document.getElementById("numeroDigitado");
+            var numeroDigitado = parseInt(txtNumero.value);
+
+            var mensagem = "Os numeros primos são: \r";
+
+            for (var i = 2; i <= numeroDigitado; i++) {
+
+                var numerosPrimos = true;
+
+                var testPrimo = i;
+
+                for (var j = 2; j < testPrimo; j++) {
+
+                    var resto = testPrimo % j;
+
+                    if (resto == 0) {
+
+                        numerosPrimos = false;
+                    }
+                }
+
+                if (numerosPrimos) {
+
+                    mensagem += testPrimo + "\r";
+
+                }
+
+
+            }
+
+            alert(mensagem);
+
+            numerosPrimos.value = "";
+            txtNumero.value = "";
+            txtNumero.focus();
+            
+        }
+
+    </script>
+
+</body>
+</html>

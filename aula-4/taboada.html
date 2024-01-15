@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Taboada</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Taboada </h1>
+
+            <p>Digite um numero para taboada</p>
+
+
+            <label for="quantidade">Digite um numero:</label><input type="number" id="numDigitado" />
+            <br>
+
+            <p>Digite a quantidade desejada </p>
+
+
+            <label for="quantNumero">Digite um numero:</label><input type="number" id="quantNumero">
+
+            <p>max. até 22*</p>
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var x = document.getElementById("numDigitado").value;
+            var numDigitado = parseInt(x);
+
+            var y = document.getElementById("quantNumero").value;
+            var quantNumero = parseInt(y);
+
+            var mensagem = "A taboada do numero " + numDigitado + " é: \r";
+
+            for (var i = 0; i <= quantNumero; i++) {
+
+                var valorOperacao = 0;
+                valorOperacao = numDigitado * i;
+
+                mensagem += numDigitado + " X " + i + " = " + valorOperacao + "\r";
+                
+
+                
+            }
+
+            alert(mensagem);
+
+            alert("Fim do programa.");
+        }
+
+    </script>
+
+</body>
+</html>

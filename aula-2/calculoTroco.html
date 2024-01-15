@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Supermecados </title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Sistema de Troco</h1>
+
+            <p>Caixa de Supermecado</p>
+
+            <label for="txt1">Preço do produto:</label>
+            <input type="number" id="txt0">
+
+            <label for="txt1">Quantidade:</label>
+            <input type="number" id="txt1">
+
+            <label for="txt1">Valor de entrada:</label>
+            <input type="number" id="txt2">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var x = document.getElementById("txt0").value;
+            var produto = parseFloat(x);
+            var y = document.getElementById("txt1").value;
+            var quantidade = parseFloat(y);
+            var valorFinal = produto * quantidade;
+
+            var z = document.getElementById("txt2").value;
+            var dinheiroEntrada = parseFloat(z);
+
+            var troco = dinheiroEntrada - valorFinal;
+
+            var mensagem = "O total da sua compra foi " + valorFinal + "$ e como valor de  " + dinheiroEntrada.toFixed(2) + "$ para a compra, você receberá " + troco + "$ de troco.";
+            
+
+            alert(mensagem);
+
+        }
+
+    </script>
+
+</body>
+</html>
